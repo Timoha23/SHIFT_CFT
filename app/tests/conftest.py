@@ -60,15 +60,6 @@ async def async_client():
         yield ac
 
 
-# @pytest.fixture(scope="session")
-# async def get_session_test():
-#     try:
-#         session: AsyncSession = async_session_test()
-#         yield session
-#     finally:
-#         await session.close()
-
-
 @pytest.fixture(scope="session")
 async def admin():
     session: AsyncSession = async_session_test()
